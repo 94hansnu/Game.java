@@ -21,7 +21,7 @@ public class Meny {
         // Här bör det komma game.shop.showShop();
     }
     // Avslutar spelet
-    public static void exitGame() {
+    static void exitGame() {
         System.exit(0);
     }
 
