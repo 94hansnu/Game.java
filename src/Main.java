@@ -9,17 +9,5 @@ public class Main {
         Meny.afterShowOptions();
         System.out.println("\nHEJ\n");
 
-       // Meny.allConnected();
-       // Meny.showGameHeadMeny();
-       /* Meny.createNewGame();
-        Meny.showOptions();
-        Meny.goAdventuring();
-        String a = Meny.userChoise();
-
-        System.out.println(a);
-        Integer b = Meny.checkUserChoise(a);
-        System.out.println(b);
-        Meny.createNewGame();*/
-
     }
 }
