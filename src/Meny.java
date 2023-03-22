@@ -24,7 +24,14 @@ public class Meny {
             choise = checkUserChoise(userChoise());
         }
             switch (choise){
-                case 1:
+
+            case 1 -> goAdventuring();
+            case 2 -> showCharacter();
+            case 3 -> showShop();
+            case 4 -> exitGame();
+                default -> System.out.println("Enter a number between 1-4.");
+
+               /* case 1:
                     goAdventuring();
                     break;
                 case 2:
@@ -34,9 +41,11 @@ public class Meny {
                     showShop();
                 case 4:
                     exitGame();
+
+
                 default:
                     System.out.println("Enter a number between 1-4.");
-                    break;
+                    break;*/
             }
 
     }
