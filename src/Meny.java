@@ -19,7 +19,10 @@ public class Meny {
     }
     public static void afterShowOptions() {
         Integer choise = checkUserChoise(userChoise());
-        if (choise != null) {
+        while(choise == null) {
+            showOptions();
+            choise = checkUserChoise(userChoise());
+        }
             switch (choise){
                 case 1:
                     goAdventuring();
@@ -35,7 +38,7 @@ public class Meny {
                     System.out.println("Enter a number between 1-4.");
                     break;
             }
-        }
+
     }
     public static void allConnected() {
         showGameHeadMeny();
