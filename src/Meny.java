@@ -17,6 +17,31 @@ public class Meny {
     public static void exitGame() {
         System.exit(0);
     }
+    public static void afterShowOptions() {
+        Integer choise = checkUserChoise(userChoise());
+        if (choise != null) {
+            switch (choise){
+                case 1:
+                    goAdventuring();
+                    break;
+                case 2:
+                    showCharacter();
+                    break;
+                case 3:
+                    showShop();
+                case 4:
+                    exitGame();
+                default:
+                    System.out.println("Enter a number between 1-4.");
+                    break;
+            }
+        }
+    }
+    public static void allConnected() {
+        showGameHeadMeny();
+        createNewGame();
+        showOptions();
+    }
 
 
     public static void showGameHeadMeny() {

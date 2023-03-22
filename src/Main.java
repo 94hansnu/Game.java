@@ -5,8 +5,13 @@ public class Main {
         //Testing
         System.out.println("Hello world!");
 
-        Meny.showGameHeadMeny();
-        Meny.createNewGame();
+        Meny.allConnected();
+        Meny.afterShowOptions();
+        System.out.println("\nHEJ\n");
+
+       // Meny.allConnected();
+       // Meny.showGameHeadMeny();
+       /* Meny.createNewGame();
         Meny.showOptions();
         Meny.goAdventuring();
         String a = Meny.userChoise();
@@ -14,6 +19,7 @@ public class Main {
         System.out.println(a);
         Integer b = Meny.checkUserChoise(a);
         System.out.println(b);
-        Meny.createNewGame();
+        Meny.createNewGame();*/
+
     }
 }
