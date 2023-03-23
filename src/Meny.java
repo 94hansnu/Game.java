@@ -24,7 +24,7 @@ public class Meny {
                          "\n* Welcome to The Game  *"+
                          "\n************************"+
                          "\n* Enter your name: ");
-        return new Scanner(System.in).next();
+        return userChoise();
     }
     // Visar de fyra alternativ som finns
     public static void showOptions() {
