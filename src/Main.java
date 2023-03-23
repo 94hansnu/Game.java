@@ -2,13 +2,11 @@ public class Main {
     public static void main(String[] args) {
 
 
+        Game game = new Game(Meny.showGameHeadMeny());
+        game.startGame();
+
         //Testing
         System.out.println("Hello world!");
-
-        Meny.allConnected();
-        Meny.afterShowOptions();
-        System.out.println("\nHEJ\n");
-        Meny meny = new Meny();
 
        // Meny.allConnected();
        // Meny.showGameHeadMeny();

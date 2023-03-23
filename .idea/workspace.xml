@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00c4ade4-1c75-45d3-8e9a-f6b8892a1b06" name="Changes" comment="Kelly">
+    <list default="true" id="00c4ade4-1c75-45d3-8e9a-f6b8892a1b06" name="Changes" comment="Kelly // rensar">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Meny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Meny.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +70,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1679573801382</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Kelly // rensar">
+      <created>1679574635230</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1679574635230</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +96,7 @@
     <MESSAGE value="Nothing done, skrev en kommentar //Testing" />
     <MESSAGE value="Öppnar från lizzies dator" />
     <MESSAGE value="Kelly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kelly" />
+    <MESSAGE value="Kelly // rensar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kelly // rensar" />
   </component>
 </project>

@@ -8,9 +8,8 @@ public class Game {
     }
     public void startGame() {
         System.out.println("Game started");
-        System.out.println(name + " this is working great");
-        gameOver();
-        name = "Abba";
+        Meny.showOptions();
+        switchish();
     }
 
     public void gameOver() {
