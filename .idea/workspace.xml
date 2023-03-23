@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" name="Changes" comment="Vet ej om jag är inloggad på min eller lizzies gh, men detta är av kelly.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="00c4ade4-1c75-45d3-8e9a-f6b8892a1b06" name="Changes" comment="Öppnar från lizzies dator" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +53,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1679314106585</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Öppnar från lizzies dator">
+      <created>1679571439015</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1679571439015</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -73,6 +77,7 @@
     <MESSAGE value="Nothing done" />
     <MESSAGE value="Nothing done, skrev en kommentar //Test" />
     <MESSAGE value="Nothing done, skrev en kommentar //Testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nothing done, skrev en kommentar //Testing" />
+    <MESSAGE value="Öppnar från lizzies dator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Öppnar från lizzies dator" />
   </component>
 </project>
