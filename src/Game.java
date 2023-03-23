@@ -18,12 +18,12 @@ public class Game {
         Meny.afterShowOptions();
         System.out.println(name);
     }
-    public void switchish(Integer choise) {
-        switch (choise){
-            case 1 -> goAdventuring();
-            case 2 -> showCharacter();
-            case 3 -> showShop();
-            case 4 -> exitGame();
+    public void switchish() {
+        switch (Meny.afterShowOptions()){
+            case 1 -> System.out.println(1);
+            case 2 -> System.out.println(2);
+            case 3 -> System.out.println(3);
+            case 4 -> System.out.println(4);
             default -> System.out.println("No default.");
         }
     }

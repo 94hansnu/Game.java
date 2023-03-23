@@ -1,24 +1,28 @@
 
 import java.util.Scanner;
 public class Meny {
+    // Kanske onödig
     public static Game game;
 
-
-    public Meny() {
-        game = new Game("Kelly");
-    }
+    // Kanske onödig
     public static void createNewGame() {
         game = new Game(userChoise());
     }
+
+    // Kanske onödig
     public static void goAdventuring() { game.startGame(); }
 
+    // Kanske onödig
     public static void showCharacter() {
         // Här bör det skrivas game.player.getName osv.
         System.out.println();
     }
+    // Kanske onödig
     public static void showShop() {
         // Här bör det komma game.shop.showShop();
     }
+
+    // Kanske onödig
     public static void exitGame() {
         System.exit(0);
     }
@@ -45,7 +49,7 @@ public class Meny {
     }
     public static void allConnected() {
         showGameHeadMeny();
-        createNewGame();
+        createNewGame(); // Kanske onödig
         showOptions();
     }
 
@@ -62,7 +66,6 @@ public class Meny {
     }
     public static String userChoise() {
         Scanner scanner = new Scanner(System.in);
-
         return scanner.next();
     }
     public static Integer checkUserChoise(String userChoise) {
