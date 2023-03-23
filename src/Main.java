@@ -8,6 +8,7 @@ public class Main {
         Meny.allConnected();
         Meny.afterShowOptions();
         System.out.println("\nHEJ\n");
+        Meny meny = new Meny();
 
        // Meny.allConnected();
        // Meny.showGameHeadMeny();

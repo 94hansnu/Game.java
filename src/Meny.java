@@ -2,6 +2,11 @@
 import java.util.Scanner;
 public class Meny {
     public static Game game;
+
+
+    public Meny() {
+        game = new Game("Kelly");
+    }
     public static void createNewGame() {
         game = new Game(userChoise());
     }
@@ -17,37 +22,26 @@ public class Meny {
     public static void exitGame() {
         System.exit(0);
     }
-    public static void afterShowOptions() {
+    public static Integer afterShowOptions() {
         Integer choise = checkUserChoise(userChoise());
-        while(choise == null) {
-            showOptions();
-            choise = checkUserChoise(userChoise());
+        while(choise == null || choise < 1 || choise > 4) {
+            if (choise == null) {
+                showOptions();
+                choise = checkUserChoise(userChoise());
+            }
+            else {
+                System.out.println("Enter a number between 1-4.\n> ");
+                choise = checkUserChoise(userChoise());
+            }
         }
+        return choise; /*
             switch (choise){
-
             case 1 -> goAdventuring();
             case 2 -> showCharacter();
             case 3 -> showShop();
             case 4 -> exitGame();
-                default -> System.out.println("Enter a number between 1-4.");
-
-               /* case 1:
-                    goAdventuring();
-                    break;
-                case 2:
-                    showCharacter();
-                    break;
-                case 3:
-                    showShop();
-                case 4:
-                    exitGame();
-
-
-                default:
-                    System.out.println("Enter a number between 1-4.");
-                    break;*/
-            }
-
+                default -> System.out.println("No default.");
+            }*/
     }
     public static void allConnected() {
         showGameHeadMeny();
