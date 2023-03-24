@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
 public class Shop {
-    private int amuletCost = 100; //Pris på amuletterna i gold
+    private int amuletCost = 100;
     private Scanner scanner;
+    private Player player;
 
     public Shop(Scanner scanner) {
         this.scanner = scanner;
+        this.player =  player;
     }
 
         public void displayMeny () {
@@ -15,7 +17,6 @@ public class Shop {
             System.out.println("3. Se goldsaldo");
             System.out.println("4. Återgå till huvudmeny");
         }
-    public void checkGold(Player player) { //??
 
         public void buyItem ( int choice, Player player){
             switch (choice) {
@@ -41,13 +42,14 @@ public class Shop {
                     System.out.println("Du har " + player.getGold() + "gold.");
                     break;
                 case 4:
-                    System.out.println("Tack för ditt besök!");
+                   // Återgå till huvudmeny
                     break;
                 default:
                     System.out.println("Ogiltligt val. Försök igen.");
                     break;
             }
         }
-        while (choice != 4) ;
+        public void checkGold(Player player) {
+            System.out.println("Du har " + player.getGold() + "gold.");
     }
 }
