@@ -37,8 +37,7 @@ public class Monster extends Traits{
     @Override
     public int getXP() { return xp; }
 
-    // public void lessXP
-
+    // public int lessHP
     public int getXP ()
        // return 0?
     //utveckl
