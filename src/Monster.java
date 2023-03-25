@@ -1,3 +1,8 @@
+public class Monster {
+
+    // hej
+    // Monster-class
+}
 import java.lang.reflect.Method;
 // extenda
 public class Monster extends Traits{
