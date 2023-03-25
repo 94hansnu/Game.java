@@ -12,7 +12,18 @@ public class Monster {
     public int HP;
     public int XP;
 
-    //  public Gold Gold;
+
+    public Monster (String name, int HP, int XP)
+
+    public void getXP()
+
+    // public void lessXP
+
+    public int getXP ()
+       // return 0?
+    public void defense(int attack)  {hp-=attack; }
+
+
 
 
 
