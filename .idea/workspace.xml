@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" name="Changes" comment="variablerna //Testing">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-20_12_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-20_12_27__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-20_12_39__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-20_12_39__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" name="Changes" comment="städar/ lizzie">
       <change beforePath="$PROJECT_DIR$/src/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster.java" afterDir="false" />
     </list>
-    <list id="f8c7ec0c-3f61-4e55-917e-f166b567beba" name="Changes by zandracruz" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster.java" afterDir="false" />
-    </list>
+    <list id="f8c7ec0c-3f61-4e55-917e-f166b567beba" name="Changes by zandracruz" comment="Changes by zandracruz" />
     <list default="true" id="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" name="Changes" comment="Nothing done, skrev en kommentar //Testing" />
     <list default="true" id="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" name="Changes" comment="variablerna //Testing">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -71,21 +58,6 @@
   &quot;lastFilter&quot;: {
   }
 }</component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Monster.java">
-      <ranges>
-        <range start1="1" end1="3" start2="1" end2="3" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
-        <range start1="9" end1="10" start2="9" end2="10" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
-        <range start1="14" end1="14" start2="14" end2="22" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
-        <range start1="15" end1="16" start2="23" end2="25" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
-        <range start1="17" end1="18" start2="26" end2="34" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
-        <range start1="19" end1="21" start2="35" end2="36" changelist="f8c7ec0c-3f61-4e55-917e-f166b567beba" />
-        <range start1="24" end1="24" start2="39" end2="40" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
-        <range start1="25" end1="38" start2="41" end2="47" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
-        <range start1="39" end1="39" start2="48" end2="49" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -163,7 +135,19 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1679743003917</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="städar">
+      <created>1679745301916</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1679745301916</updated>
+    </task>
+    <task id="LOCAL−00006" summary="Changes by zandracruz">
+      <created>1679745317314</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1679745317314</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,6 +166,8 @@
     <MESSAGE value="Nothing done, skrev en kommentar //Test" />
     <MESSAGE value="Nothing done, skrev en kommentar //Testing" />
     <MESSAGE value="variablerna //Testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="variablerna //Testing" />
+    <MESSAGE value="städar" />
+    <MESSAGE value="Changes by zandracruz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by zandracruz" />
   </component>
 </project>
