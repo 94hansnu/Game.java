@@ -21,7 +21,7 @@ public class Monster {
 
     public int getXP ()
        // return 0?
-    //utveckla
+    //utveckl
     public void defense(int attack)  {hp-=attack; }
 
 
