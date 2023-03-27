@@ -8,8 +8,12 @@ public class Player extends Traits{
         this.strength=0;
         this.toughness=0;
     }
+
     @Override
     public void defense(int damage){
+        if(damage + toughness < 0) {
+            setHp(getXp()-=(damage+toughness));
+        }
     }
 
     public Integer getStrength(){

@@ -4,6 +4,7 @@ public interface InterfaceMethods {
     String getName();
     Integer getXp();
     Integer getHp();
+    void setHp(int newHp);
 }
 
 //Pseudokod

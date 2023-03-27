@@ -26,6 +26,8 @@ public class Traits implements InterfaceMethods{
     public Integer getHp(){
         return this.hp;
     }
+    @Override
+    public void setHp(int newHp){};
 }
 
 //Pseudokod
