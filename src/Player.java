@@ -14,6 +14,7 @@ public class Player extends Traits{
         if(damage + toughness < 0) {
             setHp(getXp()-=(damage+toughness));
         }
+
     }
 
     public Integer getStrength(){
