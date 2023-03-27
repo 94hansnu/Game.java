@@ -36,5 +36,18 @@ public class Monster extends Traits{
     public String getName() { return name; }
     @Override
     public Integer attack() { return 1+(int)(Math.random()*10); }
+
+    //ärv från monster, xp o hp samma
+
+    // specific monster class
+
+    public class specific monster extends Monster{
+
+
+
+    }
 }
+
+}
+
 
