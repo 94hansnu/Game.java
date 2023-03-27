@@ -18,7 +18,7 @@ public class Shop {
             System.out.println("4. Återgå till huvudmeny");
         }
 
-        public void buyItem ( int choice, Player player){
+        public void buyItem ( int choice){
             switch (choice) {
                 case 1:
                     if (player.getGold() >= amuletCost) {
@@ -49,7 +49,4 @@ public class Shop {
                     break;
             }
         }
-        public void checkGold(Player player) {
-            System.out.println("Du har " + player.getGold() + "gold.");
     }
-}
