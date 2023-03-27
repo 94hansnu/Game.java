@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" name="Changes" comment="Känns färdigt">
-      <change beforePath="$PROJECT_DIR$/src/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop.java" afterDir="false" />
-    </list>
+    <list default="true" id="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" name="Changes" comment="Känns färdigt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +60,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1679314106585</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Känns färdigt">
+      <created>1679914971901</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1679914971901</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -80,6 +84,7 @@
     <MESSAGE value="Nothing done" />
     <MESSAGE value="Nothing done, skrev en kommentar //Test" />
     <MESSAGE value="Nothing done, skrev en kommentar //Testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nothing done, skrev en kommentar //Testing" />
+    <MESSAGE value="Känns färdigt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Känns färdigt" />
   </component>
 </project>
