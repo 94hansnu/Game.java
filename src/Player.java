@@ -1,10 +1,10 @@
 public class Player extends Traits{
-    private Gold gold;
+    public Gold gold;
     private Integer strength;
     private Integer toughness;
     public Player(String name, Integer xp, Integer hp ){
         super(name, xp, hp);
-        Gold= new Gold();
+        gold= new Gold();
         this.strength=0;
         this.toughness=0;
     }
@@ -23,7 +23,7 @@ public class Player extends Traits{
     public Integer getToughness(){
         return toughness;
     }
-    public void  setStrength(Integer strength){ this.strength;}
+    public void  setStrength(Integer strength){ this.strength += strength; }
     public void setToughness(Integer toughness){ this.toughness;}
 }
 //Pseudokod
