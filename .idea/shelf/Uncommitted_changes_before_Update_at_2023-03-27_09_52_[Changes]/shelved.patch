@@ -1,0 +1,135 @@
+Index: src/Meny.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\nimport java.util.Scanner;\r\npublic class Meny {\r\n    public static Game game;\r\n\r\n    // Skapar nytt spel\r\n    public static void createNewGame() {\r\n        // parametern i game bör förslagsvis vara att den tar emot en str player och att den sätts i game konstruktor till playerName.\r\n        game = new Game(userChoise());\r\n    }\r\n\r\n    // Fight börjar\r\n    public static void goAdventuring() {\r\n        game.startGame();\r\n    }\r\n\r\n    // Visar egenskaper av spelaren\r\n    public static void showCharacterDetails() {\r\n        // Här bör det skrivas game.player.getName osv.\r\n        System.out.println();\r\n    }\r\n\r\n    // Visar shop meny\r\n    public static void showShop() {\r\n        // Här bör det komma game.shop.showShop();\r\n    }\r\n\r\n    // Avslutar spelet\r\n    static void exitGame() {\r\n        System.exit(0);\r\n    }\r\n\r\n    // Kontrollerar om användarens input är mellan 1-4. Om det stämmer körs ett av alternativen,\r\n    // annars kommer metoden loopas tills användaren skriver in korrekt.\r\n    public static void afterShowOptions() {\r\n        Integer choise = whileWrongInput();\r\n        if (choise < 5 && choise > 0) {\r\n            switch (choise) {\r\n                case 1 -> goAdventuring();\r\n                case 2 -> showCharacterDetails();\r\n                case 3 -> showShop();\r\n                case 4 -> exitGame();\r\n            }\r\n        } else {\r\n            System.out.print(\"Enter a number between 1-4.\\n> \");\r\n            afterShowOptions();\r\n        }\r\n    }\r\n\r\n    // Låter användaren skriva in sitt val. Om val != int kommer loop köras. Return int.\r\n    static Integer whileWrongInput() {\r\n        Integer choise = checkUserChoise(userChoise());\r\n        while (choise == null) {\r\n            showOptions();\r\n            choise = checkUserChoise(userChoise());\r\n        }\r\n        return choise;\r\n    }\r\n\r\n    // Tror jag tar bort denna\r\n    public static void allConnected() {\r\n        showGameHeadMeny();\r\n        createNewGame();\r\n        showOptions();\r\n    }\r\n\r\n\r\n    // Visar det första som kommer upp när man startar programmet\r\n    public static void showGameHeadMeny() {\r\n        System.out.print(\"************************\" +\r\n                \"\\n* Welcome to The Game  *\" +\r\n                \"\\n************************\" +\r\n                \"\\n* Enter your name: \");\r\n    }\r\n\r\n    // Visar de fyra val användaren har\r\n    public static void showOptions() {\r\n        System.out.print(\"\\n1. Go adventuring\\n2. Show details about your character\" +\r\n                \"\\n3. Go to shop\\n4. Exit game\\n> \");\r\n    }\r\n\r\n    // Return användarens input. Används dels för att kontrollera om input är av korrekt format,\r\n    // samt att ta in användarens PlayerName\r\n    public static String userChoise() {\r\n        Scanner scanner = new Scanner(System.in);\r\n        return scanner.next();\r\n    }\r\n\r\n    // Kontrollerar om användarens input är av typ int\r\n    public static Integer checkUserChoise(String userChoise) {\r\n        int test = 0;\r\n        try {\r\n            test = Integer.valueOf(userChoise);\r\n            return test;\r\n        } catch (NumberFormatException e) {\r\n            System.out.println(\"Don't try to enter letters or special characters.\");\r\n            return null;\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Meny.java b/src/Meny.java
+--- a/src/Meny.java	(revision 069f809c91672f66998d91bcafe2771e57a40e7e)
++++ b/src/Meny.java	(date 1679903517975)
+@@ -1,100 +1,50 @@
+-
+ import java.util.Scanner;
+ public class Meny {
+-    public static Game game;
+-
+-    // Skapar nytt spel
+-    public static void createNewGame() {
+-        // parametern i game bör förslagsvis vara att den tar emot en str player och att den sätts i game konstruktor till playerName.
+-        game = new Game(userChoise());
+-    }
+-
+-    // Fight börjar
+-    public static void goAdventuring() {
+-        game.startGame();
+-    }
+-
+-    // Visar egenskaper av spelaren
+-    public static void showCharacterDetails() {
+-        // Här bör det skrivas game.player.getName osv.
+-        System.out.println();
+-    }
+-
+-    // Visar shop meny
+-    public static void showShop() {
+-        // Här bör det komma game.shop.showShop();
+-    }
+ 
+-    // Avslutar spelet
+-    static void exitGame() {
+-        System.exit(0);
+-    }
+-
+-    // Kontrollerar om användarens input är mellan 1-4. Om det stämmer körs ett av alternativen,
+-    // annars kommer metoden loopas tills användaren skriver in korrekt.
+-    public static void afterShowOptions() {
+-        Integer choise = whileWrongInput();
+-        if (choise < 5 && choise > 0) {
+-            switch (choise) {
+-                case 1 -> goAdventuring();
+-                case 2 -> showCharacterDetails();
+-                case 3 -> showShop();
+-                case 4 -> exitGame();
+-            }
+-        } else {
+-            System.out.print("Enter a number between 1-4.\n> ");
+-            afterShowOptions();
+-        }
+-    }
+-
+-    // Låter användaren skriva in sitt val. Om val != int kommer loop köras. Return int.
+-    static Integer whileWrongInput() {
++    // Loopar igenom användarens inmatning tills det är mellan 1-4.
++    public static Integer afterShowOptions() {
+         Integer choise = checkUserChoise(userChoise());
+-        while (choise == null) {
+-            showOptions();
+-            choise = checkUserChoise(userChoise());
++        while(choise == null || choise < 1 || choise > 4) {
++            if (choise == null) {
++                showOptions();
++                choise = checkUserChoise(userChoise());
++            }
++            else {
++                System.out.println("Enter a number between 1-4.\n> ");
++                choise = checkUserChoise(userChoise());
++            }
+         }
+         return choise;
+     }
+ 
+-    // Tror jag tar bort denna
+-    public static void allConnected() {
+-        showGameHeadMeny();
+-        createNewGame();
+-        showOptions();
+-    }
+-
+-
+-    // Visar det första som kommer upp när man startar programmet
+-    public static void showGameHeadMeny() {
+-        System.out.print("************************" +
+-                "\n* Welcome to The Game  *" +
+-                "\n************************" +
++    // Välkomst meny
++    public static String showGameHeadMeny() {
++        System.out.print("************************"+
++                "\n* Welcome to The Game  *"+
++                "\n************************"+
+                 "\n* Enter your name: ");
++        return userChoise();
+     }
+-
+-    // Visar de fyra val användaren har
++    // Visar de fyra alternativ som finns
+     public static void showOptions() {
+         System.out.print("\n1. Go adventuring\n2. Show details about your character" +
+                 "\n3. Go to shop\n4. Exit game\n> ");
+     }
+-
+-    // Return användarens input. Används dels för att kontrollera om input är av korrekt format,
+-    // samt att ta in användarens PlayerName
++    // Returnerar en str från användare
+     public static String userChoise() {
+         Scanner scanner = new Scanner(System.in);
+         return scanner.next();
+     }
+-
+-    // Kontrollerar om användarens input är av typ int
++    // Med try-catch testar denna endast om användarens inmatning är av nummerformat
+     public static Integer checkUserChoise(String userChoise) {
+         int test = 0;
+         try {
+             test = Integer.valueOf(userChoise);
+             return test;
+-        } catch (NumberFormatException e) {
++        }
++        catch (NumberFormatException e) {
+             System.out.println("Don't try to enter letters or special characters.");
+             return null;
+         }
+     }
+-}
++}
+\ No newline at end of file
