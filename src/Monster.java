@@ -46,6 +46,7 @@ public class Monster extends Traits{
 
 
     }
+}
 
 }
 
