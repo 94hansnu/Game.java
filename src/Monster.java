@@ -41,7 +41,7 @@ public class Monster extends Traits{
 
     // specific monster class
 
-    public class specific monster extends Monster{
+    public class SpecificMonster extends Monster{
 
 
 
@@ -49,5 +49,4 @@ public class Monster extends Traits{
 }
 
 }
-
 
