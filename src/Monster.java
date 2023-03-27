@@ -40,13 +40,14 @@ public class Monster extends Traits{
     //ärv från monster, xp o hp samma
 
     // specific monster class
-
-    public class SpecificMonster extends Monster{
-
-
-
-    }
 }
 
+public class SpecificMonster extends Monster{
+
+
+
 }
+
+
+
 
