@@ -1,0 +1,111 @@
+Index: src/Monster.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.lang.reflect.Method;\r\n// extenda\r\npublic class Monster extends Traits{\r\n\r\n\r\n    // Detta är Monster klassen\r\n\r\n    // variabler (monstret förlorar Gold vid döden,monstret gör att användaren förlorar hp men vinner xp)\r\n\r\n    // dessa tre borde raderas om hanandi har gjort som vi skrev\r\n    public String name;\r\n    public int HP;\r\n    public int XP;\r\n\r\n    /* metoderna som ska finnas:\r\n    void attack();\r\n\r\n void defense(Integer attack);\r\n\r\n String getName();\r\n\r\n Integer getXp();\r\n\r\n Integer getHp();\r\n     */\r\n\r\n\r\n    // borde här ej vara:\r\n    public Monster (String name, int HP, int XP) {\r\n        super(name,hp,xp);\r\n    }\r\n    // int ? public int\r\n    @Override\r\n    public int getXP() { return xp; }\r\n\r\n    // public int lessHP\r\n    public int getXP ()\r\n       // return 0?\r\n    //utveckl\r\n    @Override\r\n    public void defense(int attack)  {hp-=attack; }\r\n    @Override\r\n    public int getHP() { return HP; }\r\n    @Override\r\n    public String getName() { return name; }\r\n    @Override\r\n    public Integer attack() { return 1+(int)(Math.random()*10); }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Monster.java b/src/Monster.java
+--- a/src/Monster.java	(revision a15e3cf70632f12e685145467cc66d4dfc0fdc1e)
++++ b/src/Monster.java	(date 1679745398554)
+@@ -32,10 +32,6 @@
+     // int ? public int
+     @Override
+     public int getXP() { return xp; }
+-
+-    // public int lessHP
+-    public int getXP ()
+-       // return 0?
+     //utveckl
+     @Override
+     public void defense(int attack)  {hp-=attack; }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae\" name=\"Changes\" comment=\"variablerna //Testing\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-20_12_27__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-20_12_27__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-20_12_39__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-20_12_39__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_3.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_3.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_4.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_4.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_5.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_5.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_6.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_6.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Monster.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Monster.java\" afterDir=\"false\" />\r\n    </list>\r\n    <list id=\"f8c7ec0c-3f61-4e55-917e-f166b567beba\" name=\"Changes by zandracruz\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/Monster.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Monster.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Merge.Settings\">\r\n    <option name=\"BRANCH\" value=\"origin/hehe\" />\r\n  </component>\r\n  <component name=\"Git.Rebase.Settings\">\r\n    <option name=\"NEW_BASE\" value=\"origin/main\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n  }\r\n}</component>\r\n  <component name=\"LineStatusTrackerManager\">\r\n    <file path=\"$PROJECT_DIR$/src/Monster.java\">\r\n      <ranges>\r\n        <range start1=\"1\" end1=\"3\" start2=\"1\" end2=\"3\" changelist=\"dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae\" />\r\n        <range start1=\"9\" end1=\"10\" start2=\"9\" end2=\"10\" changelist=\"dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae\" />\r\n        <range start1=\"14\" end1=\"14\" start2=\"14\" end2=\"22\" changelist=\"dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae\" />\r\n        <range start1=\"15\" end1=\"16\" start2=\"23\" end2=\"25\" changelist=\"dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae\" />\r\n        <range start1=\"17\" end1=\"18\" start2=\"26\" end2=\"34\" changelist=\"dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae\" />\r\n        <range start1=\"19\" end1=\"21\" start2=\"35\" end2=\"36\" changelist=\"f8c7ec0c-3f61-4e55-917e-f166b567beba\" />\r\n        <range start1=\"24\" end1=\"24\" start2=\"39\" end2=\"40\" changelist=\"dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae\" />\r\n        <range start1=\"25\" end1=\"38\" start2=\"41\" end2=\"47\" changelist=\"dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae\" />\r\n        <range start1=\"39\" end1=\"39\" start2=\"48\" end2=\"49\" changelist=\"dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae\" />\r\n      </ranges>\r\n    </file>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2NHHKu9lecZHziXlyR6HRw8mtHG\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae\" name=\"Changes\" comment=\"\" />\r\n      <created>1679314026549</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1679314026549</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00001\" summary=\"Nothing done, skrev en kommentar //Testing\">\r\n      <created>1679314106585</created>\r\n      <option name=\"number\" value=\"LOCAL−00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00001\" />\r\n      <updated>1679314106585</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00002\" summary=\"variablerna //Testing\">\r\n      <created>1679532701994</created>\r\n      <option name=\"number\" value=\"LOCAL−00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00002\" />\r\n      <updated>1679532701995</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00003\" summary=\"variablerna //Testing\">\r\n      <created>1679742728024</created>\r\n      <option name=\"number\" value=\"LOCAL−00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00003\" />\r\n      <updated>1679742728025</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00004\" summary=\"variablerna //Testing\">\r\n      <created>1679743003917</created>\r\n      <option name=\"number\" value=\"LOCAL−00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00004\" />\r\n      <updated>1679743003917</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Nothing done\" />\r\n    <MESSAGE value=\"Nothing done, skrev en kommentar //Test\" />\r\n    <MESSAGE value=\"Nothing done, skrev en kommentar //Testing\" />\r\n    <MESSAGE value=\"variablerna //Testing\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"variablerna //Testing\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a15e3cf70632f12e685145467cc66d4dfc0fdc1e)
++++ b/.idea/workspace.xml	(date 1679745630546)
+@@ -4,23 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" name="Changes" comment="variablerna //Testing">
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-20_12_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-20_12_27__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-20_12_39__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-20_12_39__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_3.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_4.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_5.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_6.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster.java" afterDir="false" />
+-    </list>
+-    <list id="f8c7ec0c-3f61-4e55-917e-f166b567beba" name="Changes by zandracruz" comment="">
++    <list default="true" id="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" name="Changes" comment="städar/ lizzie">
+       <change beforePath="$PROJECT_DIR$/src/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster.java" afterDir="false" />
+     </list>
++    <list id="f8c7ec0c-3f61-4e55-917e-f166b567beba" name="Changes by zandracruz" comment="Changes by zandracruz" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -46,21 +33,6 @@
+   &quot;lastFilter&quot;: {
+   }
+ }</component>
+-  <component name="LineStatusTrackerManager">
+-    <file path="$PROJECT_DIR$/src/Monster.java">
+-      <ranges>
+-        <range start1="1" end1="3" start2="1" end2="3" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
+-        <range start1="9" end1="10" start2="9" end2="10" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
+-        <range start1="14" end1="14" start2="14" end2="22" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
+-        <range start1="15" end1="16" start2="23" end2="25" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
+-        <range start1="17" end1="18" start2="26" end2="34" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
+-        <range start1="19" end1="21" start2="35" end2="36" changelist="f8c7ec0c-3f61-4e55-917e-f166b567beba" />
+-        <range start1="24" end1="24" start2="39" end2="40" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
+-        <range start1="25" end1="38" start2="41" end2="47" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
+-        <range start1="39" end1="39" start2="48" end2="49" changelist="dc9c0df7-6d03-47ec-a7c8-45c3e26a10ae" />
+-      </ranges>
+-    </file>
+-  </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+@@ -110,7 +82,19 @@
+       <option name="presentableId" value="LOCAL−00004" />
+       <updated>1679743003917</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL−00005" summary="städar">
++      <created>1679745301916</created>
++      <option name="number" value="LOCAL−00005" />
++      <option name="presentableId" value="LOCAL−00005" />
++      <updated>1679745301916</updated>
++    </task>
++    <task id="LOCAL−00006" summary="Changes by zandracruz">
++      <created>1679745317314</created>
++      <option name="number" value="LOCAL−00006" />
++      <option name="presentableId" value="LOCAL−00006" />
++      <updated>1679745317314</updated>
++    </task>
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -129,6 +113,8 @@
+     <MESSAGE value="Nothing done, skrev en kommentar //Test" />
+     <MESSAGE value="Nothing done, skrev en kommentar //Testing" />
+     <MESSAGE value="variablerna //Testing" />
+-    <option name="LAST_COMMIT_MESSAGE" value="variablerna //Testing" />
++    <MESSAGE value="städar" />
++    <MESSAGE value="Changes by zandracruz" />
++    <option name="LAST_COMMIT_MESSAGE" value="Changes by zandracruz" />
+   </component>
+ </project>
+\ No newline at end of file

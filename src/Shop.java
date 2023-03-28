@@ -21,7 +21,7 @@ public class Shop {
         public void buyItem ( int choice){
             switch (choice) {
                 case 1:
-                    if (player.getGold() >= amuletCost) {
+                    if (player.gold.getGold() >= amuletCost) {
                         player.setGold(player.getGold() - amuletCost);
                         player.setStrength(player.setStrength() + 5); //Ökar spelarens styrka med 5
                         System.out.println("Du köpte en styrkeamulett!");
