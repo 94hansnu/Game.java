@@ -13,7 +13,7 @@ public class Gold {
         return amount;
 
     //Metod för att använda gold när spelaren köper från shoppen
-    public boolean useGold(int goldToUse){
+    public boolean useGold(int goldToUse) {
             if (amount >= goldToUse) {
                 amount -= goldToUse;
                 return true;
