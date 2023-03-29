@@ -5,6 +5,7 @@ public class Game {
     public Game(String name) {
         player = new Player(name, 0,200);
 
+
     }
     public void startGame() {
         System.out.println("Game started");
@@ -25,7 +26,4 @@ public class Game {
             default -> System.out.println("No default.");
         }
     }
-
-
-
 }
