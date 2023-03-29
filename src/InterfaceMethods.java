@@ -8,9 +8,7 @@ public interface InterfaceMethods {
 }
 
 //Pseudokod
-//Metod attack returnerar void
-//Metod defense returnerar void
-//Metod getName returnerar String
-//Metod getXp returnerar Integer
-//Metod getHp returnerar Integer
-//Metod setHp returnerar void
+//1. Skapa ett interface kallat InterfaceMethods.
+//2. Skapa metoder attack() returnerar Integer, defense() returnerar void, getName() returnerar String,
+// getXp() returnerar Integer, getHp() returnerar Integer och setHp() returnerar void,
+// ska implementeras av klasser som implementerar detta interface

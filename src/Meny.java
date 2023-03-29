@@ -29,8 +29,8 @@ public class Meny {
     public static void showOptions() {
         System.out.print("\n1. Go adventuring\n2. Show details about your character" +
                 "\n3. Go to shop\n4. Exit game\n> ");
+        // Returnerar en str från användare
     }
-    // Returnerar en str från användare
     public static String userChoise() {
         Scanner scanner = new Scanner(System.in);
         return scanner.next();

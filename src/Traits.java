@@ -32,9 +32,12 @@ public abstract class Traits implements InterfaceMethods{
 }
 
 //Pseudokod
-//Traits klassen implementerar InterfaceMethods
-//Instansvariabler name(String), xp(Integer), hp(Integer)
-//Konstrukor Traits(String name, Integer xp, Integer hp)
-//Sätt name, xp och hp instansvariablerna till motsvarande inparametrar
-//Implementera metoderna attack();, defense();, getName(); returnerar String (return name),
-//getXp(): returnerar Integer (return xp) och getHp(); returnerar Integer (return hp)
+//1. En abstrakt klass som implementerar ett interface InterfaceMethods
+//2. Skapa instansvariabler 'name', 'xp' och 'hp'.
+//3. Konstruktor som tar emot 'name', 'xp' och 'hp' och sätter instansvariabler.
+//4. Implementera attak-metoden från interface InterfaceMethods och returnera ett slumpmässigt tal mellan 1 och 10.
+// Implementera defense-metoden frpn interface InterfaceMethods, ska inte innehålla någon kod, subklasser kan överrida denna metod.
+// Implementera getName-metoden från interface InterfaceMethods, ska returnera objektets namn
+// Implementera getXp-metoden från interface InterfaceMethods, ska returnera objektets xp
+// Implementera getHp-metoden från interface InterfaceMethods, ska returnera objektets hp
+// Implementera setHp-metoden från interface InterfaceMethods, ska inte innehålla någon kod, subklasser kan överrida denna metod.
