@@ -1,10 +1,10 @@
 public class Game {
-    public String name;
+    //public String name;
+    public Player player;
 
     public Game(String name) {
-        this.name = "hej";
-        System.out.println("Jej?");
-        System.out.println(name);
+        player = new Player(name, 0,200);
+
     }
     public void startGame() {
         System.out.println("Game started");
@@ -15,7 +15,6 @@ public class Game {
     public void gameOver() {
         Meny.showOptions();
         Meny.afterShowOptions();
-        System.out.println(name);
     }
     public void switchish() {
         switch (Meny.afterShowOptions()){
