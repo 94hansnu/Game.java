@@ -1,7 +1,7 @@
-public class Traits implements InterfaceMethods{
-    private String name;
-    private Integer xp;
-    private Integer hp;
+public abstract class Traits implements InterfaceMethods{
+    public String name;
+    public Integer xp;
+    public Integer hp;
 
     public Traits(String name, Integer xp, Integer hp){
         this.name=name;
@@ -9,10 +9,11 @@ public class Traits implements InterfaceMethods{
         this.hp=hp;
     }
     @Override
-    public void attack(){
+    public Integer attack(){
+        return 1+(int)(Math.random()*10);
     }
     @Override
-    public void defense(){
+    public void defense(int damage){
     }
     @Override
     public String getName(){

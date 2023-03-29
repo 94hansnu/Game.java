@@ -8,24 +8,29 @@ public class Gold {
         this.amount = 100; //Spelaren startar med 100 Gold
     }
 
+    public int setGold(int a) {
+        return this.amount += a;
+    }
+
 
     public int getGold() {
         return amount;
+    }
 
     //Metod för att använda gold när spelaren köper från shoppen
-    public boolean useGold(int goldToUse){
-            if (amount >= goldToUse) {
-                amount -= goldToUse;
-                return true;
-            }
-            return false;
+   /* public boolean useGold(int goldToUse) {
+        if (amount >= goldToUse) {
+            amount -= goldToUse;
+            return true;
         }
+        return false;
+    }*/
 
-        //Metod för att slumpmässigt droppa gold när spelaren besegrat ett monster
-        public int dropGold() {
-            int goldDropped = random.nextInt(100) + 1; //Slumptal mellan 1-100 Gold
-            amount += goldDropped;
-            return goldDropped;
-        }
+    //Metod för att slumpmässigt droppa gold när spelaren besegrat ett monster
+    public int dropGold() {
+        int goldDropped = random.nextInt(100) + 1; //Slumptal mellan 1-100 Gold
+        amount += goldDropped;
+        return goldDropped;
     }
+
 }

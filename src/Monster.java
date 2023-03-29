@@ -2,49 +2,29 @@
 public class Monster extends Traits{
 
 
-    // Detta är Monster klassen
-
-    // variabler (monstret förlorar Gold vid döden,monstret gör att användaren förlorar hp men vinner xp)
-
-    // dessa tre borde raderas om hanandi har gjort som vi skrev
-    public String name;
-    public int HP;
-    public int XP;
-
-    /* metoderna som ska finnas:
-    void attack();
-
- void defense(Integer attack);
-
- String getName();
-
- Integer getXp();
-
- Integer getHp();
-     */
-
-    public Monster (String name, int HP, int XP) {
-        super(name,hp,xp);
+    public Monster(String name, int xp, int hp) {
+        super(name,xp,hp);
     }
-    @Override
-    public int getXP() { return xp; }
-    @Override
+    /*
+    @Override // Tror ej denna met behövs???
+    public int getXp() { return xp; }
+    @Override // samma här
     public void defense(int attack)  {hp-=attack; }
     @Override
-    public int getHP() { return HP; }
+    public int getHp() { return hp; }
     @Override
-    public String getName() { return name; }
-    @Override
-    public Integer attack() { return 1+(int)(Math.random()*10); }
+    public String getName() { return name; }*/
+    //@Override
+    //public Integer attack() { return 1+(int)(Math.random()*10); }
 
-    //ärv från monster, xp o hp samma
 
-    // specific monster class
 }
+// specific monster class 
 
-public class SpecificMonster extends Monster{
-
-
+class SpecificMonster extends Monster{
+    public SpecificMonster(String name, int xp, int hp) {
+        super (name, xp * (1+(int)(Math.random()*5)), hp * (1+(int)(Math.random()*5)));
+    }
 
 }
 

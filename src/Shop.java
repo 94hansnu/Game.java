@@ -22,24 +22,24 @@ public class Shop {
             switch (choice) {
                 case 1:
                     if (player.gold.getGold() >= amuletCost) {
-                        player.setGold(player.getGold() - amuletCost);
-                        player.setStrength(player.setStrength() + 5); //Ökar spelarens styrka med 5
+                        player.gold.setGold(player.gold.getGold() - amuletCost);
+                        player.setStrength(player.setStrength(5)); //Ökar spelarens styrka med 5
                         System.out.println("Du köpte en styrkeamulett!");
                     } else {
                         System.out.println("Du har inte tillräckligt med gold för att köpa en styrkeamulett");
                     }
                     break;
                 case 2:
-                    if (player.getGold() >= amuletCost) {
-                        player.setGold(player.getGold() - amuletCost);
-                        player.setToughness(player.getToughness() + 2); //Ökar spelarens försvar med 2
+                    if (player.gold.getGold() >= amuletCost) {
+                        player.gold.setGold(player.gold.getGold() - amuletCost);
+                        player.setToughness(player.getToughness()+ 2); //Ökar spelarens försvar med 2
                         System.out.println("Du köpte en försvarsamulett!");
                     } else {
                         System.out.println("Du har inte tillräckligt med gold för att köpa en försvarsamulett");
                     }
                     break;
                 case 3:
-                    System.out.println("Du har " + player.getGold() + "gold.");
+                    System.out.println("Du har " + player.gold.getGold() + "gold.");
                     break;
                 case 4:
                    // Återgå till huvudmeny
