@@ -2,10 +2,6 @@ public class Main {
     public static void main(String[] args) {
 
         Monster m = new SpecificMonster("Kelly", 10, 10);
-
-
-
-
         Game game = new Game(Meny.showGameHeadMeny());
         game.startGame();
 
