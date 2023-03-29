@@ -1,6 +1,6 @@
 public interface InterfaceMethods {
-    void attack();
-    void defense();
+    Integer attack();
+    void defense(int damage);
     String getName();
     Integer getXp();
     Integer getHp();
@@ -13,3 +13,4 @@ public interface InterfaceMethods {
 //Metod getName returnerar String
 //Metod getXp returnerar Integer
 //Metod getHp returnerar Integer
+//Metod setHp returnerar void
