@@ -17,6 +17,9 @@ public class Player extends Traits{
             setHp(newHp);
     }
     }
+    public void setXp(Integer a) {
+        this.xp += a;
+    }
     public Integer getStrength(){
         return strength;
     }

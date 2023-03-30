@@ -59,6 +59,20 @@ public class Game {
                     }
 
                 }
+                if(monster.getHp() < 1) {
+                    player.setXp(monster.getXp());
+                    System.out.println("You brutally killed the monster, dealing " + monster.getXp() + " experience!");
+                    if(player.getXp()/level+1 > 99) {
+                        System.out.println("You leveled up!");
+                        level ++;
+                    }
+                    evolveTheMonster();
+                }
+                if(player.getHp() < 1) {
+                    System.out.println("Hahahahaha the monsters gave you a humiliating fight and now you have no HP left :(");
+                    System.exit(0);
+                }
+
             }
             else {
                 System.out.println("You see nothing but swaying grass all around you...\n[Press enter to continue]");
