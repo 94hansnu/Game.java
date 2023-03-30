@@ -11,8 +11,8 @@ public class Game {
     public Game(String name) {
         player = new Player(name, 0,200);
         level = 0;
-        for(int i = 1; i<11; i++) {
-            monsters.add(new Monster(Reasons.getRandomName(), 50*i, 50*i));
+        for(int i = 0; i<11; i++) {
+            monsters.add(new Monster(Reasons.getRandomName(), 50*i+1, 50*i+1));
         }
         shop = new Shop(player);
     }
@@ -47,12 +47,14 @@ public class Game {
                 while(monster.getHp()> 0) {
                     playerFight();
                     while(true){
+                        System.out.println("[Press enter to continue] ");
                         if(checkEnter()) {
                             break;
                         }
                     }
                     monsterFight();
                     while(true){
+                        System.out.println("[Press enter to continue] ");
                         if(checkEnter()) {
                             break;
                         }
@@ -61,15 +63,21 @@ public class Game {
                 }
                 if(monster.getHp() < 1) {
                     player.setXp(monster.getXp());
+                    player.gold.dropGold();
                     System.out.println("You brutally killed the monster, dealing " + monster.getXp() + " experience!");
                     if(player.getXp()/(level+1) > 99) {
                         System.out.println("You leveled up!");
                         level ++;
+                        System.out.println(level);
+                        abortGame();
                         currentMonster();
                     }
                     else {
                         evolveTheMonster();
+                        System.out.println(monster.getName() + " has evolved...");
                     }
+                    Meny.showOptions();
+                    switchish();
                 }
                 if(player.getHp() < 1) {
                     System.out.println("Hahahahaha the monsters gave you a humiliating fight and now you have no HP left :(");
@@ -87,6 +95,12 @@ public class Game {
             }
         }
 
+    }
+    private void abortGame() {
+        if (level > 9) {
+            System.out.println("Congratulations, you are now level 10. Game won!");
+            System.exit(0);
+        }
     }
 
 
@@ -133,11 +147,14 @@ public class Game {
     public void showCharacter() {
         System.out.println("Name: " + player.getName() + "\nLevel: " + level + "\nHp: " + player.getHp() +
         "\nXp: " + player.getXp() + "\nStrenght: " + player.getStrength() + "\nToughness: " + player.getToughness());
+        Meny.showOptions();
+        switchish();
     }
     // Går till shop, tar emot ett giltligt användarval, därefter körs switchish igen där användare får göra om huvudmenyval igen.
     public void goToShop() {
         shop.displayMeny();
         shop.buyItem(Meny.afterShowOptions());
+        Meny.showOptions();
         switchish();
     }
 }

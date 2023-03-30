@@ -5,6 +5,7 @@ public class Meny {
     public static Integer afterShowOptions() {
         Integer choise = checkUserChoise(userChoise());
         while(choise == null || choise < 1 || choise > 4) {
+
             if (choise == null) {
                 showOptions();
                 choise = checkUserChoise(userChoise());
