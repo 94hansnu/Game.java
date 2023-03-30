@@ -10,11 +10,11 @@ public class Player extends Traits{
         this.toughness=0;
     }
     @Override
-    public void defense(int damage){//osäker om denna ska vara kvar
-        int totalDefense= damage-toughness;//beräknar totalt försvar inklusive toughness
+    public void defense(int damage){
+        int totalDefense= damage-toughness;
         if (totalDefense>0){
-            int newHp=getHp()-totalDefense;//beräknar ny hp efter skada
-            setHp(newHp);//sätter nya hp värdet
+            int newHp=getHp()-totalDefense;
+            setHp(newHp);
     }
     }
     public Integer getStrength(){
@@ -27,8 +27,17 @@ public class Player extends Traits{
     public int setToughness(Integer toughness){return this.toughness=toughness;}
 }
 //Pseudokod
-//Instansvariabler för player-klassen
-//Konstrukor för player-klassen
-//Superklass för att kalla på Traits klassens konstruktor och sedan initialisera player klassens egna instansvariabler
-//Override-metoden defense som finns i Traits klassen
-//Getter och setters -metoder för player-instansvariabler
+//1. Klassen 'Player', som ärver från klassen 'Traits'
+//2. Tre instansvariabler definieras 'gold' av typen 'Gold', 'strength' och 'toughness' av typen 'Integer'.
+//3. En konstruktor för klassen definieras, som tar tre argument:'name' av typen 'String', 'xp' av typen 'Integer'
+// och 'hp' av typen 'Integer'. Konstruktorn anropar först konstruktorn för överordnad klass med 'super(name, xp, hp)
+// vilket sätter värdena på 'name', 'xp', och 'hp'. Sedan skapas en ny instans av 'Gold' och tilldelas till variabeln 'gold'
+// värdena på 'strength och 'toughness' sätt till 0.
+//4. En metod 'defense' definieras, som tar ett argument 'damage' av typen 'int'. Metoden beräknar först det totala
+// försvarsvärdet genom att subtrahera 'toughness' från 'damage'. Om 'totalDefense' är större än 0 beräknar metoden
+// det nya hälsotillståndet genom att subtrahera 'totalDefense' från det aktuella hälsotillståndet(som erhålls från metoden
+// 'getHp()' och sedan sätta det nya hälsotillståndet med metoden 'setHp(newHp)'.
+//5. Två metoder 'getStrength' och 'getTougness' definieras, som returnerar 'strength' och 'toughness'.
+//6. Två metoder 'setStrength' och 'setToughness' definieras, som ökar värdet på 'strength' och sätter värdet på 'toughness'
+// till det nya värdet som skickas in i metoden. 'setStrength' ökar 'strenght' med nya värdet och returnerar det nya värdet
+// av 'strength'
