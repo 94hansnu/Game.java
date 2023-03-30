@@ -13,7 +13,7 @@ public abstract class Traits implements InterfaceMethods{
         return 1+(int)(Math.random()*10);
     }
     @Override
-    public void defense(int damage){
+    public void defense(int damage){ hp -= damage;
     }
     @Override
     public String getName(){

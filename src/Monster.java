@@ -5,8 +5,9 @@ public class Monster extends Traits{
     public Monster(String name, int xp, int hp) {
 
         super(name,xp,hp);
-
     }
+
+
 
 
 
