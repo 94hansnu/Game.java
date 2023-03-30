@@ -1,11 +1,11 @@
 public class Player extends Traits{
-    public Gold gold;
+    public Gold gold = new Gold();;
     public Integer strength;
     public Integer toughness;
     
     public Player(String name, Integer xp, Integer hp ){
         super(name, xp, hp);
-        Gold gold= new Gold();
+       // Gold gold
         this.strength=0;
         this.toughness=0;
     }

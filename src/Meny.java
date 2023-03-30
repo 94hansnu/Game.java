@@ -35,6 +35,10 @@ public class Meny {
         Scanner scanner = new Scanner(System.in);
         return scanner.next();
     }
+    public static String userChoiseNextLine() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
+    }
     // Med try-catch testar denna endast om användarens inmatning är av nummerformat
     public static Integer checkUserChoise(String userChoise) {
         int test = 0;

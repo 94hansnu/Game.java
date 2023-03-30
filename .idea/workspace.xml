@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="606d1162-ecfe-4387-aeb5-33c348b41cab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gold.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InterfaceMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InterfaceMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameExempel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameExempel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Meny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Meny.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reasons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reasons.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Traits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +54,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dd9263f5-fd9b-4157-a953-f881209fd895" name="Changes" comment="" />
+      <changelist id="606d1162-ecfe-4387-aeb5-33c348b41cab" name="Changes" comment="" />
       <created>1680088319967</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
