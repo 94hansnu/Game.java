@@ -12,7 +12,7 @@ public class Meny {
             }
             else {
                 System.out.println("Enter a number between 1-4.\n> ");
-                choise = checkUserChoise(userChoise());
+                choise = checkUserChoise(userChoiseNextLine());
             }
         }
         return choise;

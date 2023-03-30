@@ -9,30 +9,27 @@ public class Game {
     public Shop shop;
 
     public Game(String name) {
-        player = new Player(name, 0,200);
+        player = new Player(name, 0, 200);
         level = 0;
-        for(int i = 0; i<11; i++) {
-            monsters.add(new Monster(Reasons.getRandomName(), 50*i+1, 50*i+1));
+        for (int i = 0; i < 11; i++) {
+            monsters.add(new Monster(Reasons.getRandomName(), 50 * (i + 1), 10 * (i + 1)));
         }
         shop = new Shop(player);
     }
+
     public void startGame() {
         System.out.println("Game started");
         currentMonster();
         Meny.showOptions();
         switchish();
     }
+
     public Integer chanceOfAttack() {
-        return (int)(Math.random()*10);
+        return (int) (Math.random() * 10);
     }
 
-
-    public void gameOver() {
-        Meny.showOptions();
-        Meny.afterShowOptions();
-    }
     public void switchish() {
-        switch (Meny.afterShowOptions()){
+        switch (Meny.afterShowOptions()) {
             case 1 -> goAdventuring();
             case 2 -> showCharacter();
             case 3 -> goToShop();
@@ -40,100 +37,114 @@ public class Game {
             default -> System.out.println("No default.");
         }
     }
+
     public void goAdventuring() {
-        while (level<10) {
-            if(chanceOfAttack()>0) {
-                System.out.println("Oh... " + monster.getName() + " appeared!");
-                while(monster.getHp()> 0) {
-                    playerFight();
-                    while(true){
-                        System.out.println("[Press enter to continue] ");
-                        if(checkEnter()) {
-                            break;
-                        }
-                    }
-                    monsterFight();
-                    while(true){
-                        System.out.println("[Press enter to continue] ");
-                        if(checkEnter()) {
-                            break;
-                        }
-                    }
-                }
-                }
-                if(monster.getHp() < 1) {
-                    player.setXp(monster.getXp());
-                    player.gold.dropGold();
-                    System.out.println("You brutally killed the monster, dealing " + monster.getXp() + " experience!");
-                    if(player.getXp()/(level+1) > 99) {
-                        System.out.println("You leveled up!");
-                        level ++;
-                        System.out.println(level);
-                        abortGame();
-                        currentMonster();
-                    }
-                    else {
-                        evolveTheMonster();
-                        System.out.println(monster.getName() + " has evolved...");
-                    }
-                    Meny.showOptions();
-                    switchish();
-                }
-                if(player.getHp() < 1) {
-                    System.out.println("Hahahahaha the monsters gave you a humiliating fight and now you have no HP left :(");
-                    System.exit(0);
-                }
-
-
-            else {
-                System.out.println("You see nothing but swaying grass all around you...\n[Press enter to continue]");
-                while(true){
-                    if(checkEnter()) {
-                        break;
-                    }
+        Integer a = chanceOfAttack();
+        if (a > 0) {
+            System.out.println("Oh... " + monster.getName() + " appeared!");
+            fight();
+        } else {
+            System.out.println("You see nothing but swaying grass all around you...\n[Press enter to continue]");
+            while (true) {
+                if (checkEnter()) {
+                    break;
                 }
             }
+            goAdventuring();
         }
-
+        checkMonsterStatus();
+        isAlive();
+        Meny.showOptions();
+        switchish();
     }
-    private void abortGame() {
-        if (level > 9) {
-            System.out.println("Congratulations, you are now level 10. Game won!");
+
+    public void win() {
+        player.setXp(monster.getXp());
+        player.gold.dropGold();
+        System.out.println("You brutally killed the monster, dealing " + monster.getXp() + " experience!");
+        if (player.getXp() / (level + 1) > 99) {
+            System.out.println("You leveled up!");
+            level++;
+            currentMonster();
+        } else {
+            evolveTheMonster();
+            System.out.println(monster.getName() + " has evolved and now has " + monster.getHp() + " HP and " + monster.getXp() + " XP...");
+        }
+    }
+
+    private void checkMonsterStatus() {
+        if (monster.getHp() <= 0) {
+            win();
+        }
+    }
+
+    private void isAlive() {
+        if (player.getHp() < 1) {
+            System.out.println("You lost.");
             System.exit(0);
         }
     }
 
-
-    private Boolean checkEnter() {
-       // String input = "";
-        if(Meny.userChoiseNextLine().isEmpty()){
+    // Funkar
+    public Boolean run() {
+        if (level > 9) {
             return true;
         }
-        System.out.println("[Press enter to continue] ");
         return false;
-       // Meny.userChoiseNextLine()
-       /*String enter = Meny.userChoise();
-
-        while(!enter.isEmpty()) {
-            System.out.println("[Press enter to continue] ");
-            enter = Meny.userChoise();
-
-            //Meny.userChoise();
-        }
-        System.out.println("Denna visar sig vara true");
-        return true;*/
     }
+
+    // Funkar
+    public void fight() {
+        if (!run()) {
+            while (monster.getHp() > 0) {
+                playerFight();
+                while (true) {
+                    System.out.println("[Press enter to continue] ");
+                    if (checkEnter()) {
+                        break;
+                    }
+                }
+                monsterFight();
+                while (true) {
+                    System.out.println("[Press enter to continue] ");
+                    if (checkEnter()) {
+                        break;
+                    }
+                }
+            }
+        } else {
+            System.out.println("You won!");
+            System.exit(0);
+        }
+
+    }
+
+    // Funkar
+    private Boolean checkEnter() {
+        if (Meny.userChoiseNextLine().isEmpty()) {
+            return true;
+        }
+        return false;
+    }
+
+    // Funkar
     public void currentMonster() {
         monster = new Monster(monsters.get(level).getName(), monsters.get(level).getXp(), monsters.get(level).getHp());
     }
+
+    // Funkar
     private void evolveTheMonster() {
-        monster = new SpecificMonster(monster.getName(), monster.getXp(), monster.getHp());
+        monster = new SpecificMonster(monster.getName(), monster.getXp() * 7, (level + 1) * 100);
     }
+
+    // Funkar
     private void playerFight() {
         Integer a = player.attack();
         monster.defense(a);
-        System.out.println("You hit " + monster.getName() + " dealing " + a + " damage!");
+        System.out.println("You hit " + monster.getName() + " Dealing " + a + " damage!");
     }
+
+    // Funkar
     private void monsterFight() {
         Integer a = monster.attack();
         player.defense(a);
@@ -141,15 +152,15 @@ public class Game {
                 " dealing " + a + " damage!");
 
     }
-    private void fight() {
 
-    }
+    // Funkar
     public void showCharacter() {
         System.out.println("Name: " + player.getName() + "\nLevel: " + level + "\nHp: " + player.getHp() +
-        "\nXp: " + player.getXp() + "\nStrenght: " + player.getStrength() + "\nToughness: " + player.getToughness());
+                "\nXp: " + player.getXp() + "\nStrenght: " + player.getStrength() + "\nToughness: " + player.getToughness());
         Meny.showOptions();
         switchish();
     }
+
     // Går till shop, tar emot ett giltligt användarval, därefter körs switchish igen där användare får göra om huvudmenyval igen.
     public void goToShop() {
         shop.displayMeny();
@@ -157,4 +168,7 @@ public class Game {
         Meny.showOptions();
         switchish();
     }
+
+
 }
+
