@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class Shop {
     private int amuletCost = 100; //kostnaden för en amulett
-    // private Scanner scanner;//scanner objekt för att läsa inmatning från användaren
+
     private Player player;// Player objekt som butiken interagerar med
 
     public Shop(Player player) {//konstruktor som tar in en scanner som parameter och initierar scanner och player-variabeln.
-        //this.scanner = scanner;
+
         this.player = player;
     }
 
